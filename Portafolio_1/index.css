@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+    background-color: black;
+}
+
+/* Nav Bar */
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: whitesmoke;
+    justify-content: space-between;
+    padding: 15px;
+    transition: 0.5s ease;
+    font-family: monospace;
+    font-size: 1.4rem;
+    cursor: pointer;
+    align-items: right;
+}
+
+header a {
+    color: whitesmoke;
+    font-style: normal;
+    align-items: right;
+}
+header .brand {
+    color: red;
+}
+
+/* My Information */    
+.myInfo{
+    display: flex;
+    background-color: rgb(54, 54, 54);
+    color: whitesmoke;
+    font-size: 1.3em;
+    text-align: center;
+    padding-left: 22%;
+}
+
+.myInfo li{
+    list-style-type:lower-greek;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.myInfo li:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+/*  Profile Picture*/
+.myImage{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px;
+    align-content: center;
+}
+
+/* Card Section */
+.containerTeam{
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    padding: 7rem;
+    background-color: #111;
+}
+.cardGrid{
+    display: grid;
+    column-gap: 1.5rem; /* Adjust the space between cards */
+    max-width: 75rem; /* Adjust the size/width of the screen */
+    width: 100%; /* Ajust the full space of the screen that you have your description */
+
+}
+
+@media(min-width: 75rem){ /* The width of the media query will be the same as you have described above */
+    .cardGrid{
+        grid-template-columns: repeat(3 /* Modify the number of profiles you want to show, as much as you  want, max 8 */, 1fr);
+    }
+}
+
+.card{
+    position: relative;
+}
+
+.card::before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+}
+
+.cardBackground{
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.4375rem;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transition: filter .2s linear, transform .2s linear;
+}
+
+.card:hover .cardBackground{
+    transform: scale(1.25) translate(0);
+}
+
+.cardGrid:hover > .card:not(:hover) .cardBackground{
+    filter: brightness(1) saturate(0) contrast(1) blur(.3rem); /* Adjust the not hovered profiles to not be in focus. You can adjust contrast, saturation, and blur the settings depending on your taste  */
+}
+
+.cardContent{
+    padding: 14.375rem, 1.25rem;
+    position: absolute;
+    top: 13.5rem;
+}
+
+.cardDescription{
+    color: whitesmoke;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.cardHeading{
+    color: whitesmoke;
+    font-size: 1.9rem;
+    text-shadow: 0.125rem 0.125rem 1.25rem rgba(0,0,0,0.2); /* To adjust the text shadow */
+}
+
+p{
+    margin-top: -1.875rem;
+}
+
+
+/* Footer Begins */
+footer{
+    background-color: #111;
+}
+
+.footerContainer{
+    padding: 40px 30px 20px;
+} 
+
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+/* Hover Effects on Social MEdia Icons */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav{
+    margin: 28px 0;
+}
+
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul li a{
+    color: white;
+    margin: 25px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footerBottom{
+    background-color: #000;
+    padding: 38px;
+    text-align: center;
+}
+
+.footerBottom p{
+    color: white;
+}
+
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
