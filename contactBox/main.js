@@ -18,26 +18,12 @@ function SubmitForm(event) {
     submittedMessage.style.display = 'block';
     submittedMessage.innerText = 'Your message has been sent successfully!';
 
+    document.getElementById('contact-form').submit();
+
     // Clear the form fields after submission
     document.getElementById('email').value = '';
     document.getElementById('subject').value = '';
     document.getElementById('message').value = '';
-
-    // Add an AJAX request to send the form data to the server if needed
-    // fetch('server_endpoint', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ email, subject, message }),
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log('Success:', data);
-    // })
-    // .catch((error) => {
-    //     console.error('Error:', error);
-    // });
 }
 
 // Attach the SubmitForm function to the form's submit event

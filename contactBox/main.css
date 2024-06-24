@@ -12,6 +12,7 @@ body {
     width: 400px;
     height: 570px;
     border-radius: 14px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -62,6 +63,8 @@ textarea {
     font-weight: 700;
     border-radius: 12px;
     transition: .5s;
+    cursor: pointer;
+    border: none;
 }
 
 .submitButton:hover {

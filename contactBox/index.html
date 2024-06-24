@@ -6,13 +6,17 @@
     <title>Contact Box</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src="main.js"></script>
+    <script src="main.js"></script> <!-- Se coloca aquí el script porque solo se utilizan funciones y no se está conectando a nada-->
 </head>
 <body>
     <main>
         <div class="contact-box">
             <h2>Contact Box</h2>
-            <form action="">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- API Access Key -->
+                <input type="hidden" name="access_key" value="8963a9d9-a0f2-47a7-82d8-accff156ff48">
+
+                <!-- Forms -->
                 <div class="input-box">
                     <p><label for="name">Correo Electrónico</label></p>
                     <input placeholder="example@email.com" type="email" name="email" id="email" required>
