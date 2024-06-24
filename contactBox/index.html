@@ -6,6 +6,7 @@
     <title>Contact Box</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="main.js"></script>
 </head>
 <body>
     <main>
@@ -13,18 +14,20 @@
             <h2>Contact Box</h2>
             <form action="">
                 <div class="input-box">
-                    <p><label for="name">Name</label></p>
-                    <input type="email" name="email" id="email" required>
+                    <p><label for="name">Correo Electrónico</label></p>
+                    <input placeholder="example@email.com" type="email" name="email" id="email" required>
                 </div>
                 <div class="input-box">
-                    <p><label for="name">Correo Electrónico</label></p>
-                    <input type="text" name="subject" id="subject" required>
+                    <p><label for="name">Subject</label></p>
+                    <input placeholder="Subject Title" type="text" name="subject" id="subject" required>
                 </div>
                 <div class="input-box">
                     <p><label for="name">Message</label></p>
-                    <textarea name="message" id="message" required></textarea>
+                    <textarea placeholder="Message" name="message" id="message" required></textarea>
                 </div>
-                <button type="submit" class="submitButton">Send</button>
+                <button type="submit" class="submitButton" onclick="SubmitEvent(this)">Submit</button>
+            </form>
+            <p class="submited">.</p>
         </div>
     </main>
 </body>

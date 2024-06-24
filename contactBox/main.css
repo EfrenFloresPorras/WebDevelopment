@@ -1,16 +1,17 @@
 body {
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.541);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .contact-box{
     background-color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -120px;
-    width: 300px;
-    height: 500px;
+    top: 5%;
+    left: 5%;
+    margin-top: 10%;
+    margin-left: 35%;
+    width: 400px;
+    height: 570px;
+    border-radius: 14px;
 }
 
 h2 {
@@ -18,12 +19,52 @@ h2 {
     text-align: center;
 }
 
-.input-box {
+p {
     color: black;
+    padding-left: 5%;
+    margin-bottom: 0;
+}
+
+.submited {
+    display: none;
+    margin-top: 0px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+.input-box {
+    color: black;   
+}
+
+input {
+    width: 88%;
     padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+textarea {
+    width: 88%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
 }
 
 .submitButton {
-    color: black;
+    color: whitesmoke;
     align-content: center;
+    background-color: rgb(99, 156, 12);
+    width: 90%;
+    padding: 10px;
+    margin: 5%;
+    font-size: .9rem;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: .5s;
+}
+
+.submitButton:hover {
+    transition: 1s;
+    opacity: .6;
 }
