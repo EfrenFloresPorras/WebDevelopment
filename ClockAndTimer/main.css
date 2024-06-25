@@ -1,0 +1,18 @@
+:root {
+    --black: #000000;
+    --grey: #555555;
+    --white: #ffffff;
+}
+
+.bg-primary {
+    background-color: var(--grey) !important;
+}
+
+.txt-2 {
+    font-size: 50px;
+}
+
+.t-timer {
+    width: unset !important;
+}
+
