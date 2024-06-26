@@ -1,0 +1,22 @@
+.logo-container {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-link, nav-item .dropdown-item {
+    font-size: 20px;
+}
+
+.profile-img-container {
+    height: 200px;
+    width: 200px;
+
+}
+
+.profile-img-container img {
+    width: 100%;
+}
+
+.container {
+    margin-top: 50px;
+}
