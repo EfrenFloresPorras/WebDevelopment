@@ -1,0 +1,63 @@
+body {
+    background-color: rgba(128, 128, 128, 0.541);
+}
+.container{
+    background-color: white;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin-top: 10%;
+    margin-left: 35%;
+    width: 400px;
+    border-radius: 14px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    height: fit-content;
+}
+
+.boxContainer {
+    padding: 20px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    padding-top: 20px;
+}
+
+p {
+    color: black;
+    padding-left: 5%;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+.alert-success {
+    display: none;
+}
+
+.alert-warning {
+    display: none;
+}
+
+.alert-danger {
+    display: none;
+}
+
+.input-box {
+    color: black;   
+}
+
+input {
+    width: 88%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+textarea {
+    width: 88%;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+}
