@@ -16,6 +16,7 @@ $(document).ready(function () {
         $('.content-section').addClass('d-none');
         $('#' + targetSection).removeClass('d-none');
 
+
         // Update active state in navbar
         $('.nav-link').removeClass('active');
         $('[data-section="' + targetSection + '"]').addClass('active');
