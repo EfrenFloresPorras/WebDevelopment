@@ -17,6 +17,7 @@
 
 <body>
     <!-- Home Section Begins-->
+    <div class="headerImg"></div>
     <section id="home" class="content-section">
         <!-- Header section -->
         <header class="home">
@@ -32,7 +33,7 @@
                         <li><a href="#"><i class="ion-social-youtube"></i></a></li>
                         <li><a href="https://github.com/EfrenFloresPorras"><i class="ion-social-github"></i></a>
                         </li>
-                        <li><a href="https://www.linkedin.com/in/efren-flores-p" class="ion-social-linkedin" ></a>
+                        <li><a href="https://www.linkedin.com/in/efren-flores-p" class="ion-social-linkedin"></a>
                         </li>
                     </ul>
 
@@ -66,25 +67,31 @@
         <?php include './components/about.php'; ?>
         <?php include './components/common/footer.php'; ?>
     </section>
+    <!-- About Section Ends-->
 
+    <!-- Education Section Begins-->
     <section id="education" class="content-section d-none">
         <?php include './components/common/navbar.php'; ?>
         <?php include './components/education.php'; ?>
         <?php include './components/common/footer.php'; ?>
+    </section>
+    <!-- Education Section Ends-->
 
-    </section><!-- /Resume Section -->
-
+    <!-- Experience Section Begins-->
     <section id="experience" class="content-section d-none">
         <?php include './components/common/navbar.php'; ?>
         <?php include './components/experience.php'; ?>
         <?php include './components/common/footer.php'; ?>
     </section>
+    <!-- Experience Section Ends-->
 
+    <!-- Projects Section Begins-->
     <section id="projects" class="content-section d-none">
         <?php include './components/common/navbar.php'; ?>
         <?php include './components/projects.php'; ?>
         <?php include './components/common/footer.php'; ?>
     </section>
+    <!-- Projects Section Ends-->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>

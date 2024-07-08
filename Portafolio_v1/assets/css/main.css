@@ -122,9 +122,13 @@ p {
 /*  Header
 /*-----------------------------------------------------------------------------------*/
 
-header {
+.headerImg {
     background: url(../images/headerMe.jpg) repeat scroll center center / cover;
-    /*background: #292929;*/
+    opacity: .5;
+}
+
+header {
+    background: #292929;
     height: 100vh;
     width: 100%;
 }
