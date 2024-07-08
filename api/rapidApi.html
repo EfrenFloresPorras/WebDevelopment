@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+</head>
+
+<body>
+    <h1>Hello, world!</h1>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        const settings = {
+            async: true,    
+            crossDomain: true,
+            url: 'https://imdb-top-100-movies.p.rapidapi.com/',
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '0eb0ed2653msh1aa42261996d95ep1ff8eejsn9f5532765216',
+                'x-rapidapi-host': 'imdb-top-100-movies.p.rapidapi.com'
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    </script>
+
+</body>
+
+</html>
