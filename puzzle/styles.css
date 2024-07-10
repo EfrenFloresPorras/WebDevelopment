@@ -1,0 +1,71 @@
+.full-window {
+    height: 100vh;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231010/pngtree-high-resolution-background-showcasing-natural-patterns-of-sedimentary-rock-texture-image_13589630.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.puzzle {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: 500px 500px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.circle:nth-child(1) { top: 0; left: 0; }
+.circle:nth-child(2) { top: 50px; left: 50px; }
+.circle:nth-child(3) { top: 100px; left: 100px; }
+.circle:nth-child(4) { top: 150px; left: 150px; }
+.circle:nth-child(5) { top: 200px; left: 200px; }
+
+.circle:hover {
+    /*Change the colour of the symbols and the outline */
+    border-color: #ff8800;
+    color: #ff8800;
+    
+}
+
+.circle.selected {
+    box-shadow: 0 0 15px 5px #FFD700;
+}
+
+.icon {
+    position: absolute;
+    font-size: 20px;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .puzzle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circle {
+        background-size: 300px 300px !important;
+    }
+
+    .circle:nth-child(1) { width: 300px !important; height: 300px !important; top: 0; left: 0; }
+    .circle:nth-child(2) { width: 240px !important; height: 240px !important; top: 30px; left: 30px; }
+    .circle:nth-child(3) { width: 180px !important; height: 180px !important; top: 60px; left: 60px; }
+    .circle:nth-child(4) { width: 120px !important; height: 120px !important; top: 90px; left: 90px; }
+    .circle:nth-child(5) { width: 60px !important; height: 60px !important; top: 120px; left: 120px; }
+
+    .icon {
+        font-size: 12px;
+    }
+}
