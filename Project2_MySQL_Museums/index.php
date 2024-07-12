@@ -1,16 +1,20 @@
 <?php
+// Expected files to runn first are config.php and functions.php
 require_once 'config.php';
 require_once 'functions.php';
 
+// After finding the files, All the next starts
 session_start();
 
 // Establish database connection
 $conn = new mysqli($DB_data['server'], $DB_data['connInfo']['UID'], $DB_data['connInfo']['PWD'], $DB_data['Database']);
 
+// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// Get filter options, summary data, and table data
 $filters = [
     'medio_transporte', 'tipo_grupo', 'motivo', 'residencia', 'nacionalidad',
     'primera_leng', 'frecuencia_visita', 'estado', 'medio_com', 'escolaridad', 'estado_escolar'
@@ -21,9 +25,11 @@ foreach ($filters as $filter) {
     $filterOptions[$filter] = getFilterOptions($conn, $filter);
 }
 
+// Get summary data and table data
 $summaryData = [];
 $tableData = [];
 
+// If search form submitted, get data based on search query
 if (isset($_POST['search'])) {
     $query = buildSearchQuery($_POST);
     $summaryData = getSummaryData($conn, $query);
@@ -52,27 +58,34 @@ $conn->close();
     <div class="container-fluid">
         <h1 class="my-4 text-center">INEGI DATA - Visitas a Museos</h1>
         
+        <!-- Filters Button -->
         <div class="mb-4">
             <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#filtersCollapse" aria-expanded="false" aria-controls="filtersCollapse">
                 <i class="bi bi-filter"></i> Filtros
             </button>
         </div>
 
+        <!-- Filters Form -->
         <div class="collapse" id="filtersCollapse">
-            <form method="POST" id="searchForm">
+            <form method="POST" id="searchForm"> <!-- Formulario de búsqueda, method POST, ALL this data is sent -->
                 <div id="filters" class="row mb-4">
+
+                    <!-- Filtros, this searches each filter and each option that appear in those -->
                     <?php foreach ($filters as $filter): ?>
                     <div class="col-md-3 mb-3">
                         <label for="<?php echo $filter; ?>" class="form-label"><?php echo ucfirst(str_replace('_', ' ', $filter)); ?></label>
-                        <select name="<?php echo $filter; ?>" id="<?php echo $filter; ?>" class="form-select">
-                            <option value="">Todos</option>
-                            <?php foreach ($filterOptions[$filter] as $option): ?>
-                            <option value="<?php echo $option; ?>"><?php echo $option; ?></option>
+                        <select name="<?php echo $filter; ?>" id="<?php echo $filter; ?>" class="form-select"> <!-- Selects the filter -->
+                            <option value="">Todos</option> 
+                            <?php foreach ($filterOptions[$filter] as $value => $label): ?> <!-- Searches which options are in the filter -->
+                            <option value="<?php echo $value; ?>"><?php echo $label; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                     <?php endforeach; ?>
+
                 </div>
+
+                <!-- I'm tired, its 00:14 and this are simple buttons -->
                 <div class="mb-4">
                     <button type="submit" name="search" class="btn btn-primary">Buscar</button>
                     <button type="button" id="clearAll" class="btn btn-secondary">Clear All</button>
