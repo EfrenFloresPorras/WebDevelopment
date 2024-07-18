@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Proyecto Parcial 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container py-3">
+      <div class="row">
+        <div class="col text-center">
+          <h1>Visitas a Museos</h1>
+        </div>
+      </div>
+      <h3 class="pointer" id="toggle-filters" onclick="toggleFilters()">
+        <i id="filter-icon" class="fa fa-caret-down me-3"></i>Filtros
+      </h3>
+      <div id="filters" class="filtros">
+        <div class="row">
+          <div class="col form-floating">
+            <select
+              id="sel-transporte"
+              class="form-select"
+              title="Medio de transporte"
+            ></select>
+            <label for="floatingSelect">Medio de transporte</label>
+          </div>
+          <div class="col form-floating">
+            <select
+              id="sel-relacion"
+              class="form-select"
+              title="Tipo de grupo"
+            ></select>
+            <label for="floatingSelect">Tipo de grupo</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-motivos" class="form-select" title="Motivo de visita"></select>
+            <label for="floatingSelect">Motivo de visita</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-floating">
+            <select id="sel-pais" class="form-select" title="País de residencia"></select>
+            <label for="floatingSelect">Pais de residencia</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-nacionalidad" class="form-select" title="Nacionalidad"></select>
+            <label for="floatingSelect">Nacionalidad</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-lenguaje" class="form-select" title="Lenguaje"></select>
+            <label for="floatingSelect">Lenguaje</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-floating">
+            <select id="sel-frec_visita" class="form-select" title="Frecuencia de visita"></select>
+            <label for="floatingSelect">Frecuencia de visita</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-estado" class="form-select" title="Estado"></select>
+            <label for="floatingSelect">Estado</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-comunicacion" class="form-select" title="Medio de comunicación"></select>
+            <label for="floatingSelect">Medio de comunicación</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col form-floating">
+            <select id="sel-escolaridad" class="form-select" title="Grado máximo de estudios"></select>
+            <label for="floatingSelect">Grado max. estudios</label>
+          </div>
+          <div class="col form-floating">
+            <select id="sel-estado-escolar" class="form-select" title="Estado escolar"></select>
+              <option selected value="">Todos</option>
+              <option value="Completo">Completo</option>
+              <option value="Incompleto">Incompleto</option>
+              <option value="En curso">En curso</option>
+            </select>
+            <label for="floatingSelect">Estado escolar</label>
+          </div>
+          <div class="col d-flex">
+            <button class="m-auto btn btn-secondary" onclick="buscar()">
+              <i class="fa fa-search me-3"></i>Buscar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="resumen" class="hidden row mx-0 my-4">
+        <div class="col bg-gold">
+          <table class="mi-tabla">
+            <tr id="head">
+              <td id="vis">23</td>
+              <td id="nac">23</td>
+              <td id="ext">34</td>
+              <td id="lang1">4</td>
+              <td id="lang2">5</td>
+            </tr>
+            <tr id="body">
+              <td>Visitas</td>
+              <td>No. Nacionales</td>
+              <td>No. Extranjeros</td>
+              <td>Primera Lengua</td>
+              <td>Segunda Lengua</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row mx-0 my-4">
+        <div class="col">
+          <table class="table table-hover">
+            <thead>
+              <tr id="thead"></tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/digest.js"></script>
+  </body>
+</html>

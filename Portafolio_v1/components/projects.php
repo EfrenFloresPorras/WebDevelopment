@@ -121,9 +121,10 @@
         const projects = [
             {
                 id: 1,
-                title: "Autonomous Robot",
+                title: "Autonomous Robot FRC 2283",
                 image: "./assets/images/FRC.jpg",
                 description: "An autonomous robot capable of navigating complex environments.",
+                largeDescription: "In my time at Universidad Panamericana Preparatoria Varonil, I worked on the UP Panteras FRC team. In my time there I conducted extensive work and learned about robots, from their idealisation to their use. As a Team, we dived deep into each of the seasons, reading the rules and finding ways to make the best robot for the competition. Early on, I had the opportunity to learn the programming and electrical application in the competition, but found myself immersed with the construction of each robot. On the second season, I was the head and mentor for the electronics section, in which I had to take the lead in the design, prototyping, finding components, construction, correction, and maintenance of the robot in the same time I starting teaching the newer members from the practical to logistical aspects. At last, in final season, I specialized in the section and took role in leadership and mentoring. I learned a lot of diverse areas in this task, from still perfecting my abilities in said area to teaching, organizing, boosting moral, and being a leader in the area and outside of it. I loved working in the competition, meeting people, nationally and internationally, and having a great time with all the communities surrounding the event.",
                 type: "robotics",
                 skills: ["Arduino", "C++", "Sensor Integration", "Machine Learning"]
             },
@@ -132,16 +133,18 @@
                 title: "Intrusion Detection System",
                 image: "./assets/images/pentesting.png",
                 description: "A robust cybersecurity solution for detecting and preventing network intrusions.",
+                largeDescription: "",
                 type: "cybersecurity",
                 skills: ["Python", "Network Protocols", "Machine Learning", "Data Analysis"]
             },
             {
                 id: 3,
-                title: "Tech Startup Incubator",
+                title: "STELLA IGNIS",
                 image: "./assets/images/Stella_Ignis.jpg",
                 description: "A program designed to support and nurture early-stage technology startups.",
-                type: "entrepreneurs",
-                skills: ["Business Development", "Mentoring", "Financial Planning", "Networking"]
+                largeDescription: "Stella Ignis is a project made in collaboration with Universidad Panamericana, in which we are actively developing a model rocket that can go on to compete in ENMICE. In this team, I am the leader of the Avionics section, in which we handle, manipulate and program all the electrical components that go inside the rocket.",
+                type: "robotics",
+                skills: ["Microprocessors", "Mentoring", "Avionics", "Rockets"]
             },
             // Add more projects as needed
         ];
@@ -178,7 +181,7 @@
             expandedImage.src = project.image;
             expandedDetails.innerHTML = `
                 <h2>${project.title}</h2>
-                <p>${project.description}</p>
+                <p>${project.largeDescription}</p>
                 <h4>Skills Used:</h4>
                 <div class="skills-container">
                     ${project.skills.map(skill => `<span class="skill-pill">${skill}</span>`).join('')}

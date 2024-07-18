@@ -23,6 +23,19 @@
     background-size: 500px 500px;
     background-position: center;
     cursor: pointer;
+    overflow: visible;
+}
+
+.line {
+    width: 250px; 
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
 }
 
 .circle:nth-child(1) { top: 0; left: 0; }
@@ -46,6 +59,10 @@
     position: absolute;
     font-size: 20px;
     color: #000;
+}
+
+.icon.aligned {
+    color: #ff8800; /* Highlight color for aligned icons */
 }
 
 /* Responsive adjustments */
